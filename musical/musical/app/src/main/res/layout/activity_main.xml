@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/download_1" />
+
+    <SeekBar
+        android:id="@+id/seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:layout_margin="8dp"
+        android:layout_above="@+id/lineear" />
+
+    <LinearLayout
+        android:id="@+id/lineear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/albums"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/skip_previous"
+            android:layout_margin="8dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="#FF9800"
+            android:src="@drawable/ic_skip_previous_black_24dp" />
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_margin="8dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="#FF9800"
+            android:src="@drawable/ic_play_circle_outline_black_24dp" />
+
+        <ImageView
+            android:id="@+id/pause"
+            android:layout_margin="8dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="#FF9800"
+            android:src="@drawable/ic_pause_circle_outline_black_24dp" />
+        <!-- i want to get the image biger but i can not so i make it imageview in the Previous code (play and pause) -->
+        <ImageButton
+            android:id="@+id/skip_next"
+            android:layout_margin="8dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="#FF9800"
+            android:src="@drawable/ic_skip_next_black_24dp" />
+
+    </LinearLayout>
+    <!-- i tried margin but it not working  -->
+    <Button
+        android:paddingBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:id="@+id/albums"
+        android:textColor="#673AB7"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="go to albums"/>
+</RelativeLayout>
